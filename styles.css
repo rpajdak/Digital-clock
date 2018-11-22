@@ -1,0 +1,168 @@
+:root {
+            --blueActive: rgba(140, 225, 255, 1);
+            --blueNotActive: rgba(90, 225, 255, 0.025);
+            --blueBoxShadow: 0px -2px 25px rgba(90, 255, 255, 0.4);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto Mono', monospace;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(44, 44, 55);
+        }
+
+        .clock {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .hour,
+        .minute,
+        .second {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .digit {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100px;
+            margin: 0 10px 0;
+
+        }
+
+        .horizontal1,
+        .horizontal2,
+        .horizontal3 {
+            height: 20px;
+            width: 100px;
+            background-color: var(--blueNotActive);
+
+        }
+
+        .vertical1,
+        .vertical2,
+        .vertical3,
+        .vertical4 {
+            height: 100px;
+            width: 20px;
+            background-color: var(--blueNotActive);
+        }
+
+        .colon {
+            font-size: 200px;
+            color: var(--blueActive);
+        }
+
+        /* digit 0*/
+
+        .num0 .horizontal1,
+        .num0 .horizontal3,
+        .num0 .vertical1,
+        .num0 .vertical2,
+        .num0 .vertical3,
+        .num0 .vertical4,
+        
+        /* digit 1 */
+        
+        .num1 .vertical2,
+        .num1 .vertical4,
+      
+
+        /* digit 2 */
+        .num2 .horizontal1,
+        .num2 .horizontal2,
+        .num2 .horizontal3,
+        .num2 .vertical2,
+        .num2 .vertical3,
+     
+        /* digit 3 */
+
+        .num3 .horizontal1,
+        .num3 .horizontal2,
+        .num3 .horizontal3,
+        .num3 .vertical2,
+        .num3 .vertical4,
+      
+        /* digit 4 */
+        
+        .num4 .vertical1,
+        .num4 .vertical2,
+        .num4 .horizontal2,
+        .num4 .vertical4,
+    
+        /* digit 5 */
+        
+        .num5 .vertical1,
+        .num5 .vertical4,       
+        .num5 .horizontal1,
+        .num5 .horizontal2,
+        .num5 .horizontal3,
+       
+        /* digit 6 */
+        
+        .num6 .horizontal1,
+        .num6 .horizontal2,
+        .num6 .horizontal3,
+        .num6 .vertical1,
+        .num6 .vertical3,
+        .num6 .vertical4,
+      
+        /* digit 7 */
+        
+        .num7 .horizontal1,
+        .num7 .vertical2,
+        .num7 .vertical4,
+    
+        /* digit 8 */
+        
+        .num8 .vertical1,
+        .num8 .vertical2,
+        .num8 .vertical3,
+        .num8 .vertical4,
+        .num8 .horizontal1,
+        .num8 .horizontal2,
+        .num8 .horizontal3,
+     
+        /* digit 9 */
+        
+        .num9 .vertical1,
+        .num9 .vertical2,
+        .num9 .vertical4,
+        .num9 .horizontal1,
+        .num9 .horizontal2,
+        .num9 .horizontal3
+          {
+                
+                background-color: var(--blueActive);
+                box-shadow: var(--blueBoxShadow);
+            
+        }
+        
+        .num0 .vertical1::after,
+        .num0 .vertical2::after,
+        .num0 .vertical3::after,
+        .num0 .vertical4::after,
+        .num1 .vertical2::after,
+        .num1 .vertical4::after,
+        .num4 .vertical1::after,
+        .num4 .vertical4::after,
+        .num4 .vertical2::after,
+        .num7 .vertical2::after,
+        .num7 .vertical4::after
+        
+        {
+            content: '';
+            border-top: 20px solid var(--blueActive);
+            border-bottom: 20px solid var(--blueActive);
+            margin-top: -20px;
+            height: 100%;
+            display: block;
+        }
